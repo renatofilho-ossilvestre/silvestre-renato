@@ -8,6 +8,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
+
     steps:
       - uses: actions/checkout@v4
 
@@ -23,4 +26,4 @@ jobs:
           pip install pytest
 
       - name: Run tests
-        run: pytest
+        run: pytest -q
