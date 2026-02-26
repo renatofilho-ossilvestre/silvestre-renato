@@ -1,5 +1,5 @@
 import pandas as pd
-from src.agrocarbon.model import compute_emissions
+from agrocarbon.model import compute_emissions
 
 
 def test_compute_emissions_basic():
